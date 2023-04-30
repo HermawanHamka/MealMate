@@ -23,11 +23,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="23dp"
-        android:textColor="@color/dark"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/inter_light"
         android:gravity="center"
         android:text="Silahkan login terlebih dahulu untuk dapat masuk ke dalam aplikasi"
+        android:textColor="@color/dark"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,8 +49,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/inter_medium"
-            android:textColor="@color/greyy"
             android:text="Email"
+            android:textColor="@color/greyy"
             android:textSize="14sp" />
 
         <EditText
@@ -61,10 +61,10 @@
             android:drawableStart="@drawable/icon_email"
             android:drawablePadding="15dp"
             android:fontFamily="@font/inter_regular"
-            android:textColor="@color/dark"
-            android:textColorHint="@color/sky_dark"
             android:hint="Masukkan email"
             android:paddingStart="9dp"
+            android:textColor="@color/dark"
+            android:textColorHint="@color/sky_dark"
             android:textSize="14sp" />
 
         <TextView
@@ -74,8 +74,8 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/inter_medium"
-            android:textColor="@color/greyy"
             android:text="Kata Sandi"
+            android:textColor="@color/greyy"
             android:textSize="14sp" />
 
         <EditText
@@ -87,17 +87,14 @@
             android:drawableEnd="@drawable/hide"
             android:drawablePadding="15dp"
             android:fontFamily="@font/inter_regular"
-            android:textColor="@color/dark"
             android:hint="Masukkan Kata Sandi"
             android:inputType="textPassword"
             android:paddingStart="9dp"
             android:paddingEnd="9dp"
             android:singleLine="true"
+            android:textColor="@color/dark"
             android:textColorHint="@color/sky_dark"
             android:textSize="14sp" />
-
-
-
 
 
     </LinearLayout>
@@ -107,10 +104,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Lupa Sandi?"
         android:fontFamily="@font/inter_regular"
-        android:textSize="12sp"
+        android:text="Lupa Sandi?"
         android:textColor="@color/red_primary"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -132,6 +129,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <LinearLayout
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#BDBDBD" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="9dp"
+            android:layout_marginTop="-2dp"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="14sp"
+            android:text="atau"
+            android:textColor="#BDBDBD" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#BDBDBD" />
+
+    </LinearLayout>
+
 
 
 
