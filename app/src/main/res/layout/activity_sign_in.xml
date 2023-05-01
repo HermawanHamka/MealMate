@@ -61,7 +61,7 @@
             android:drawableStart="@drawable/icon_email"
             android:drawablePadding="15dp"
             android:fontFamily="@font/inter_regular"
-            android:hint="Masukkan email"
+            android:hint="Masukan email"
             android:paddingStart="9dp"
             android:textColor="@color/dark"
             android:textColorHint="@color/sky_dark"
@@ -78,17 +78,35 @@
             android:textColor="@color/greyy"
             android:textSize="14sp" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/layoutTextInput"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleDrawable="@drawable/showhidebutton"
-            android:textColorHint="@color/greyy">
-            <android.support.v7.widget.AppCompatEditText
-                android:id="@+id/editTextValue"
-                android:imeOptions="actionNext"
-                android:layout_marginBottom="8dp"
-                android:inputType="text"/>
-        </android.support.design.widget.TextInputLayout>
+        <FrameLayout
+            android:id="@+id/layoutSandi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/inputSandi"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/inputext"
+            android:inputType="textPassword"
+            android:hint="Masukan Kata Sandi"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="14sp"
+            android:textColor="@color/dark"
+            android:textColorHint="@color/sky_dark"
+            android:drawableStart="@drawable/ic_pw"
+            android:drawablePadding="15dp"
+            android:paddingStart="9dp"
+            />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:layout_gravity="right"
+                android:contentDescription="Show Password"
+                app:srcCompat="@drawable/hide" />
+        </FrameLayout>
 
 
     </LinearLayout>

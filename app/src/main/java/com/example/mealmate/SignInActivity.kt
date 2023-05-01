@@ -3,21 +3,20 @@ package com.example.mealmate
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.text.Editable
 import android.text.TextWatcher
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.view.MotionEvent
+import android.widget.*
+import com.google.android.material.textfield.TextInputLayout
 
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var emailEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
+    private lateinit var passwordTextInputLayout: FrameLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
@@ -32,20 +31,24 @@ class SignInActivity : AppCompatActivity() {
         emailEditText = findViewById<EditText>(R.id.inputEmail)
         passwordEditText = findViewById<EditText>(R.id.inputSandi)
         loginButton = findViewById<Button>(R.id.button)
+        passwordTextInputLayout = findViewById<FrameLayout>(R.id.layoutSandi)
+        val showHideBtn: ImageButton = findViewById(R.id.imageButton)
 
         //Show hide pw
-        passwordEditText.transformationMethod = PasswordTransformationMethod()
-        val showHideButton = passwordEditText.compoundDrawables
+        var isPasswordVisible = false
 
-        showHideButton.setOnClickListener {
-            if (passwordEditText.transformationMethod == PasswordTransformationMethod.getInstance()) {
-                passwordEditText.transformationMethod = HideReturnsTransformationMethod.getInstance()
-                showHideButton.isSelected = true
+        showHideBtn.setOnClickListener {
+            isPasswordVisible = !isPasswordVisible
+            val showPassword = isPasswordVisible
+            if (showPassword) {
+                passwordEditText.transformationMethod = null
+                showHideBtn.setImageResource(R.drawable.show)
             } else {
-                passwordEditText.transformationMethod = PasswordTransformationMethod.getInstance()
-                showHideButton.isSelected = false
+                passwordEditText.transformationMethod = PasswordTransformationMethod()
+                showHideBtn.setImageResource(R.drawable.hide)
             }
         }
+
 
         // Add TextChangedListener to EditTexts
         emailEditText.addTextChangedListener(textWatcher)
