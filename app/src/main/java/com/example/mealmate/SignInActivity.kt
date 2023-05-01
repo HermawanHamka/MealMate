@@ -5,12 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
-import android.view.MotionEvent
 import android.widget.*
-import com.google.android.material.textfield.TextInputLayout
-
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var emailEditText: EditText
