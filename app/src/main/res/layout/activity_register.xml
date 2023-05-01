@@ -1,9 +1,289 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".RegisterActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mealmate_logo" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/inter_light"
+            android:gravity="center"
+            android:text="Silahkan daftar terlebih dahulu untuk bergabung dengan kami bersama Meal Meat"        android:textColor="@color/dark"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <TextView
+                android:id="@+id/labelNamaLengkap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Nama Lengkap"
+                android:textColor="@color/greyy"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/namaLengkap"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/inputext"
+                android:drawableStart="@drawable/person"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/inter_regular"
+                android:hint="Masukan Nama Lengkap"
+                android:paddingStart="9dp"
+                android:textColor="@color/dark"
+                android:textColorHint="@color/sky_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Email"
+                android:textColor="@color/greyy"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/inputext"
+                android:drawableStart="@drawable/icon_email"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/inter_regular"
+                android:hint="Masukan email"
+                android:paddingStart="9dp"
+                android:textColor="@color/dark"
+                android:textColorHint="@color/sky_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textSandi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Kata Sandi"
+                android:textColor="@color/greyy"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:id="@+id/layoutSandi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/inputSandi"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/inputext"
+                    android:inputType="textPassword"
+                    android:hint="Masukan Kata Sandi"
+                    android:fontFamily="@font/inter_regular"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark"
+                    android:textColorHint="@color/sky_dark"
+                    android:drawableStart="@drawable/ic_pw"
+                    android:drawablePadding="15dp"
+                    android:paddingStart="9dp"
+                    />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:layout_gravity="right"
+                    android:contentDescription="Show Password"
+                    app:srcCompat="@drawable/hide" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textKonfirmasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Konfirmasi Kata Sandi"
+                android:textColor="@color/greyy"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:id="@+id/layoutKonfirmasiSandi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/inputKonfirmasiSandi"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/inputext"
+                    android:hint="Masukan Ulang Kata Sandi"
+                    android:fontFamily="@font/inter_regular"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark"
+                    android:textColorHint="@color/sky_dark"
+                    android:drawableStart="@drawable/ic_pw"
+                    android:drawablePadding="15dp"
+                    android:paddingStart="9dp"
+                    />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:layout_gravity="right"
+                    android:contentDescription="Show Password"
+                    app:srcCompat="@drawable/hide" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_large"
+            android:enabled="false"
+            android:fontFamily="@font/inter_medium"
+            android:letterSpacing="0"
+            android:minWidth="328dp"
+            android:minHeight="48dp"
+            android:text="Daftar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#BDBDBD" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="9dp"
+                android:layout_marginTop="-2dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="atau"
+                android:textColor="#BDBDBD"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#BDBDBD" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_google"
+            android:fontFamily="@font/inter_medium"
+            android:letterSpacing="0"
+            android:minWidth="328dp"
+            android:minHeight="48dp"
+            android:drawableStart="@drawable/brands"
+            android:paddingStart="16dp"
+            android:text="Masuk Dengan Google"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="35dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonGoogle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/inter_regular"
+                android:text="Sudah punya akun? "
+                android:textColor="@color/dark"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/btnRegis"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/inter_regular"
+                android:text="Masuk"
+                android:textColor="@color/red_primary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
+

@@ -60,6 +60,14 @@ class SignInActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
+
+        // Ambil data email dan password dari Intent
+        val email = intent.getStringExtra("EMAIL")
+        val password = intent.getStringExtra("PASSWORD")
+
+        // Tampilkan data email dan password pada TextView
+        emailEditText.setText(email)
+        passwordEditText.setText(password)
     }
 
     private val textWatcher = object : TextWatcher {
