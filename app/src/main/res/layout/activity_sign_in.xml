@@ -78,23 +78,17 @@
             android:textColor="@color/greyy"
             android:textSize="14sp" />
 
-        <EditText
-            android:id="@+id/inputSandi"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/inputext"
-            android:drawableStart="@drawable/ic_pw"
-            android:drawableEnd="@drawable/hide"
-            android:drawablePadding="15dp"
-            android:fontFamily="@font/inter_regular"
-            android:hint="Masukkan Kata Sandi"
-            android:inputType="textPassword"
-            android:paddingStart="9dp"
-            android:paddingEnd="9dp"
-            android:singleLine="true"
-            android:textColor="@color/dark"
-            android:textColorHint="@color/sky_dark"
-            android:textSize="14sp" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutTextInput"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/showhidebutton"
+            android:textColorHint="@color/greyy">
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextValue"
+                android:imeOptions="actionNext"
+                android:layout_marginBottom="8dp"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
 
 
     </LinearLayout>
@@ -112,8 +106,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
+        android:enabled="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -128,10 +123,11 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"/>
 
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="286dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -153,9 +149,9 @@
             android:layout_marginHorizontal="9dp"
             android:layout_marginTop="-2dp"
             android:fontFamily="@font/inter_regular"
-            android:textSize="14sp"
             android:text="atau"
-            android:textColor="#BDBDBD" />
+            android:textColor="#BDBDBD"
+            android:textSize="14sp" />
 
         <View
             android:layout_width="0dp"
@@ -165,7 +161,52 @@
 
     </LinearLayout>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_google"
+        android:fontFamily="@font/inter_medium"
+        android:letterSpacing="0"
+        android:minWidth="328dp"
+        android:minHeight="48dp"
+        android:drawableStart="@drawable/brands"
+        android:paddingStart="16dp"
+        android:text="Masuk Dengan Google"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGoogle">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/dark"
+            android:text="Pengguna baru? "
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btnRegis"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/inter_regular"
+            android:text="Register"
+            android:textColor="@color/red_primary"
+            android:textSize="12sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
