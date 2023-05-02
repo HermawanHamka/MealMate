@@ -46,7 +46,7 @@
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/lanjut" />
-    
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/introSliderViewPager"
         android:layout_width="match_parent"
@@ -54,5 +54,7 @@
         android:layout_marginBottom="13dp"
         android:overScrollMode="never"
         app:layout_constraintBottom_toTopOf="@id/indicatorContainer"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
