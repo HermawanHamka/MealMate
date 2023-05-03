@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/bottom_nav_beranda"
+        android:title="Beranda"
+        android:icon="@drawable/ic_home"
+        app:cnb_iconColor="@color/red_primary"
+        app:cnb_backgroundColor="@color/kuning"/>
+
+    <item
+        android:id="@+id/bottom_nav_statistik"
+        android:title="Statistik"
+        android:icon="@drawable/ic_chart"
+        app:cnb_iconColor="@color/red_primary"
+        app:cnb_backgroundColor="@color/kuning"/>
+
+    <item
+        android:id="@+id/bottom_nav_akun"
+        android:title="Akun"
+        android:icon="@drawable/ic_profile"
+        app:cnb_iconColor="@color/red_primary"
+        app:cnb_backgroundColor="@color/kuning"/>
+</menu>

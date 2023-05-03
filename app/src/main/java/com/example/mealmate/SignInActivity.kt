@@ -1,6 +1,7 @@
 package com.example.mealmate
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -13,8 +14,20 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
     private lateinit var passwordTextInputLayout: FrameLayout
+    private lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_sign_in)
+        // Mengecek status login user pada shared preferences
+        sharedPreferences = getSharedPreferences("MySharedPreferences", MODE_PRIVATE)
+        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
+        if (isLoggedIn) {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
+
         setContentView(R.layout.activity_sign_in)
         //Pindah ke Register
         val btnRegis = findViewById<TextView>(R.id.btnRegis)
@@ -57,8 +70,16 @@ class SignInActivity : AppCompatActivity() {
 
         //Button masuk klik
         loginButton.setOnClickListener{
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            loginButton.setOnClickListener{
+                // Jika login berhasil, simpan status login user ke shared preferences
+                val editor = sharedPreferences.edit()
+                editor.putBoolean("isLoggedIn", true)
+                editor.apply()
+
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
 
         // Ambil data email dan password dari Intent
