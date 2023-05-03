@@ -1,14 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragmentnavbar.AkunFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragmentnavbar.AkunFragment">
+    android:padding="20dp"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="3dp"
+    tools:layout_editor_absoluteY="105dp">
 
-
-    <TextView
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_akun"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="200dp">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="86dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/profilsaya"
+                tools:layout_editor_absoluteX="86dp"
+                tools:layout_editor_absoluteY="100dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kobo Kanaeru" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="bokobokobo@gmail.com" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/spesifikasiakun" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Akun dan Keamanan"/>
+
+        <Button
+            android:id="@+id/btnProfilAkun"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableLeft="@drawable/icon_profile"
+            android:drawableRight="@drawable/ic_arrow_right_24"
+            android:text="Profile"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnProfilEmailPass"
+            android:background="?android:attr/selectableItemBackground"
+            android:textAlignment="textStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_email_pass"
+            android:drawableRight="@drawable/ic_arrow_right_24"
+            android:text="Email dan Password"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="18dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Akun Yang Terhubung"/>
+
+            <Button
+                android:id="@+id/btnGoogleAkun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/icon_google_akun"
+                android:drawableRight="@drawable/ic_arrow_right_24"
+                android:text="Google"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnProfilKeluar"
+                android:background="?android:attr/selectableItemBackground"
+                android:textAlignment="textStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_keluar_akun"
+                android:drawableRight="@drawable/ic_arrow_right_24"
+                android:text="Keluar"
+                android:textAllCaps="false"
+                android:textColor="@color/red_primary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/ic_producedby"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

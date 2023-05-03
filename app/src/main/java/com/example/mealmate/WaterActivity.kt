@@ -15,6 +15,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.slider.Slider
 
 
@@ -22,6 +23,7 @@ class WaterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.example.mealmate.R.layout.activity_water)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         //Dropdown
         val timeset = listOf("15 Menit","30 Menit","45 Menit","60 Menit")
         val autoComplete : AutoCompleteTextView = findViewById(com.example.mealmate.R.id.auto_complete_txt)
@@ -36,6 +38,9 @@ class WaterActivity : AppCompatActivity() {
         //Slider
         val slider = findViewById<Slider>(com.example.mealmate.R.id.slider)
         slider.setLabelFormatter(MyLabelFormatter())
+
+
+
         val backButton: ImageView = findViewById<ImageView>(com.example.mealmate.R.id.backbutton)
         backButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
