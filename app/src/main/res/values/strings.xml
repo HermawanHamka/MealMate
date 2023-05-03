@@ -4,5 +4,5 @@
     <string name="btn_lanjut">Lanjut</string>
     <string name="btn_lewati">Lewati</string>
     <string name="show_password">Lewati</string>
-
+    <string name="label_waktu">Waktu</string>
 </resources>
