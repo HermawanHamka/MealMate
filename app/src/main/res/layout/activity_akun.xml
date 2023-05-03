@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".AkunActivity"
         android:layout_width="match_parent"
@@ -9,7 +8,29 @@
         android:orientation="vertical"
         tools:layout_editor_absoluteX="3dp"
         tools:layout_editor_absoluteY="105dp">
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+
+        <TextView
+            android:id="@+id/emaildanpasswordtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginLeft="35dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Akun"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
         <LinearLayout
             android:padding="20dp"
             android:orientation="vertical"

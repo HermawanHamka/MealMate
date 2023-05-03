@@ -1,17 +1,21 @@
 package com.example.mealmate
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 
 class InactivePasswordActivity : AppCompatActivity() {
     private lateinit var perbaruiBtn:Button
     private lateinit var passLama:EditText
     private lateinit var passBaru:EditText
     private lateinit var passKonfirmasi:EditText
+    private lateinit var btnBackEdit:ImageButton
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,12 +26,23 @@ class InactivePasswordActivity : AppCompatActivity() {
         passLama = findViewById(R.id.editPassLama)
         passBaru = findViewById(R.id.editPassBaru)
         passKonfirmasi = findViewById(R.id.editPassKonfirmasi)
+        btnBackEdit = findViewById<ImageButton>(R.id.backEditPass)
+
 
         passLama.addTextChangedListener(loginTextWatcher)
         passBaru.addTextChangedListener(loginTextWatcher)
         passKonfirmasi.addTextChangedListener(loginTextWatcher)
 
         /* click the button */
+        btnBackEdit.setOnClickListener {
+            val pindah_pass = Intent(this, EmailDanPasswordActivity::class.java)
+            startActivity(pindah_pass)
+        }
+
+        perbaruiBtn.setOnClickListener {
+            val pindah_emailpass = Intent(this, EmailDanPasswordActivity::class.java)
+            startActivity(pindah_emailpass)
+        }
 
     }
         private val loginTextWatcher = object : TextWatcher{

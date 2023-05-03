@@ -20,13 +20,14 @@
             android:layout_marginLeft="35dp"
             android:gravity="center"
             android:padding="20dp"
-            android:text="Edit Password"
+            android:text="Profil Saya"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_centerHorizontal="true"/>
 
         <ImageButton
+            android:id="@+id/backProfilSaya"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
