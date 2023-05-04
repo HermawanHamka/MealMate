@@ -15,7 +15,7 @@ class ProfilSayaActivity : AppCompatActivity() {
         val btnBack = findViewById<ImageButton>(R.id.backProfilSaya)
 
         btnBack.setOnClickListener {
-            val pindah = Intent(this, AkunFragment::class.java)
+            val pindah = Intent(this, HomeActivity::class.java)
             startActivity(pindah)
         }
     }

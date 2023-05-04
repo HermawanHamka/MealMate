@@ -116,7 +116,7 @@
                 android:textColorHint="@color/sky_dark"
                 android:fontFamily="@font/inter_medium"
                 android:hint="00:00"
-                android:inputType="datetime"/>
+                android:inputType="time"/>
         </LinearLayout>
 
 

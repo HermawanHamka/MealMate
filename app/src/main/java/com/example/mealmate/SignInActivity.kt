@@ -14,13 +14,14 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
     private lateinit var passwordTextInputLayout: FrameLayout
+    private var isLoginButtonClicked = false
     private lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
         // Mengecek status login user pada shared preferences
         sharedPreferences = getSharedPreferences("MySharedPreferences", MODE_PRIVATE)
-        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
+        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false) && isLoginButtonClicked
         if (isLoggedIn) {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
@@ -74,6 +75,9 @@ class SignInActivity : AppCompatActivity() {
                 val editor = sharedPreferences.edit()
                 editor.putBoolean("isLoggedIn", true)
                 editor.apply()
+
+                // Set isLoginButtonClicked to true
+                isLoginButtonClicked = true
 
                 val intent = Intent(this, personalisasi1::class.java)
                 startActivity(intent)
