@@ -5,13 +5,10 @@
     <string name="btn_lewati">Lewati</string>
     <string name="show_password">Lewati</string>
     <string-array name="jenis_kelamin">
-
         <item>Laki-Laki</item>
         <item>Perempuan</item>
     </string-array>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
     <string name="item_label">Items</string>
     <string name="label_waktu">Waktu</string>
 </resources>

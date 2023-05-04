@@ -69,18 +69,17 @@ class SignInActivity : AppCompatActivity() {
         loginButton.alpha = 0.5f
 
         //Button masuk klik
-        loginButton.setOnClickListener{
             loginButton.setOnClickListener{
                 // Jika login berhasil, simpan status login user ke shared preferences
                 val editor = sharedPreferences.edit()
                 editor.putBoolean("isLoggedIn", true)
                 editor.apply()
 
-                val intent = Intent(this, HomeActivity::class.java)
+                val intent = Intent(this, personalisasi1::class.java)
                 startActivity(intent)
                 finish()
             }
-        }
+
 
         // Ambil data email dan password dari Intent
         val email = intent.getStringExtra("EMAIL")

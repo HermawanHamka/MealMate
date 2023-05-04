@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.TextView
+import com.example.mealmate.fragmentnavbar.AkunFragment
 
 class EmailDanPasswordActivity : AppCompatActivity() {
 
@@ -29,7 +30,7 @@ class EmailDanPasswordActivity : AppCompatActivity() {
         }
 
            btnBack.setOnClickListener {
-            val back_akun = Intent(this, AkunActivity::class.java)
+            val back_akun = Intent(this, HomeActivity::class.java)
             startActivity(back_akun)
         }
     }

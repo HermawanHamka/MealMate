@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".personalisasi3">
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="21dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_back"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:text="Target Asupan Air"
+        android:textSize="24dp"
+        android:textColor="@color/dark" />
+
+
+
+    <ImageView
+        android:id="@+id/imageViewPersonalisasi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageBack"
+        app:srcCompat="@drawable/personalisasi3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/dark"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:text="Pengingat Minum"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPersonalisasi2" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/inter_light"
+        android:gravity="center"
+        android:text="Rekomendasi adalah target asupan air harian rata-rata untuk orang dewasa. Kamu bisa mengubahnya sesuai dengan apa yang kamu butuhkan sekarang atau didalam pengaturan"
+        android:textColor="@color/dark"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:paddingStart="19dp"
+            android:paddingEnd="9dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/inter_medium"
+                android:layout_gravity="center"
+                android:text="Target Harian"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/inputTarget"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:minWidth="48dp"
+                android:background="@null"
+                android:drawableEnd="@drawable/ml"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/inter_medium"
+                android:layout_gravity="start"
+                android:hint="0"
+                android:inputType="number"
+                android:textColorHint="@color/sky_dark"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/card_background"
+            android:orientation="horizontal"
+            android:paddingStart="19dp"
+            android:paddingEnd="9dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Waktu selang pengingat"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/waktuPengingat"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:minWidth="48dp"
+                android:drawableEnd="@drawable/min"
+                android:drawablePadding="10dp"
+                android:background="@null"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center"
+                android:hint="0"
+                android:inputType="number"
+                android:textColorHint="@color/sky_dark"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linierLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+        <TextView
+            android:id="@+id/textPersonalisasi"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/dark"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/inter_light"
+            android:gravity="center"
+            android:text="Kalau kamu bingung untuk menentukan target"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <TextView
+            android:id="@+id/textPersonalisasi2"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/dark"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/inter_light"
+            android:gravity="center"
+            android:text="harian dan waktu selang minum, pakai"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/buttonRekomendasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_primary"
+                android:fontFamily="@font/inter_light"
+                android:textSize="14sp"
+                android:text=" rekomendasi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark"
+                android:fontFamily="@font/inter_light"
+                android:textSize="14sp"
+                android:text=" aja !" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/button_lanjut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_large"
+        android:fontFamily="@font/inter_medium"
+        android:letterSpacing="0"
+        android:minWidth="328dp"
+        android:minHeight="48dp"
+        android:text="Lanjut"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linierLayout2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

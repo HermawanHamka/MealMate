@@ -105,7 +105,8 @@
                     app:thumbColor="#0065D0"
                     app:thumbRadius="8dp"
                     app:tickColorInactive="#0065D0"
-                    app:trackColor="#D9D9D9"
+                    app:trackColorActive="@color/blue"
+                    app:trackColorInactive="#D9D9D9"
                     app:trackHeight="10dp" />
 
                 <LinearLayout

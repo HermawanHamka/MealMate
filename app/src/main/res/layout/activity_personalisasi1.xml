@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".personalisasi1">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mealmate_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:textColor="@color/dark"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/inter_light"
+        android:gravity="center"
+        android:text="Masukkan informasi mengenai dirimu, untuk dapatkan rekomendasi mengenai jadwal makan dan asupan cairan yang kamu perlukan"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/textKelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/greyy"
+            android:text="Jenis Kelamin"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputext"
+            app:boxBackgroundColor="@color/sky_light"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:startIconDrawable="@drawable/jenis_kelamin"
+            app:startIconTint="@null">
+
+            <AutoCompleteTextView
+                android:id="@+id/inputKelamin"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/sky_dark"
+                android:textSize="14sp"
+                android:text="Masukan Jenis Kelamin"
+                android:dropDownSelector="@drawable/inputext"
+                android:ellipsize="end"
+                android:inputType="text|textAutoComplete"
+                android:maxLines="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:layout_weight="1"
+                tools:ignore="LabelFor"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textBerat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/greyy"
+            android:text="Berat Badan"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/inputBerat"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/inputext"
+            android:drawableStart="@drawable/timbangan"
+            android:drawableEnd="@drawable/kg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/dark"
+            android:hint="Masukkan Berat Badan"
+            android:inputType="number"
+            android:paddingStart="9dp"
+            android:paddingEnd="20dp"
+            android:singleLine="true"
+            android:textColorHint="@color/sky_dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textTnggi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/greyy"
+            android:text="Tinggi Badan"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/inputTinggi"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/inputext"
+            android:drawableStart="@drawable/tinggi"
+            android:drawableEnd="@drawable/cm"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/dark"
+            android:textColorHint="@color/sky_dark"
+            android:hint="Masukkan Tinggi Badan"
+            android:paddingStart="9dp"
+            android:paddingEnd="20dp"
+            android:inputType="number"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textBangun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/greyy"
+            android:text="Bangun Tidur"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/inputBangun"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/inputext"
+            android:drawableStart="@drawable/bangun"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/dark"
+            android:textColorHint="@color/sky_dark"
+            android:hint="Masukkan Bangun Tidur"
+            android:paddingStart="9dp"
+            android:inputType="time"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button_lanjut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_large"
+            android:fontFamily="@font/inter_medium"
+            android:letterSpacing="0"
+            android:minWidth="328dp"
+            android:minHeight="48dp"
+            android:text="Lanjut"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

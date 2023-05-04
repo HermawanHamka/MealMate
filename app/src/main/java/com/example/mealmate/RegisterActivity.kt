@@ -85,7 +85,7 @@ class RegisterActivity : AppCompatActivity() {
             val password = passwordEditText?.text.toString()
 
             // Buat Intent untuk pindah ke activity Sign In
-            val signInIntent = Intent(this@RegisterActivity, SignInActivity::class.java)
+            val signInIntent = Intent(this, SignInActivity::class.java)
 
             // Sertakan data email dan password pada Intent
             signInIntent.putExtra("EMAIL", email)
